@@ -1,0 +1,246 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #fff5f5, #e3f2fd);
+}
+
+/* HEADER */
+
+.header {
+    background: linear-gradient(90deg, #ff1744, #ff9100);
+    padding: 20px;
+    text-align: center;
+    color: white;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.logoBox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.logo {
+    width: 95px;
+    height: 95px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid white;
+    background: white;
+    padding: 3px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+
+}
+
+/* ADS */
+
+.ads {
+    width: 100%;
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 10px;
+}
+
+.ads img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+    transition: opacity 0.6s ease-in-out;
+
+}
+
+
+/* PRODUCTS */
+
+.products {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    padding: 30px;
+    flex-wrap: wrap;
+}
+
+/* CARD DESIGN */
+
+.card {
+    backdrop-filter: blur(10px);
+    background: rgba(255,255,255,0.75);
+    border-radius: 18px;
+    padding: 18px;
+    width: 220px;
+    text-align: center;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.card::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 5px;
+    top: 0;
+    left: 0;
+    background: linear-gradient(90deg, #ff1744, #ffea00);
+}
+
+.card:hover {
+    transform: translateY(-10px) scale(1.03);
+}
+
+.card img {
+    width: 100%;
+    border-radius: 12px;
+}
+
+/* PRICE */
+
+.card p {
+    font-size: 18px;
+    font-weight: bold;
+    color: #2e7d32;
+    margin-top: 8px;
+}
+
+/* BUTTON */
+
+button {
+    background: linear-gradient(90deg, #00c853, #64dd17);
+    color: white;
+    border: none;
+    padding: 12px;
+    margin-top: 12px;
+    width: 100%;
+    cursor: pointer;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: linear-gradient(90deg, #00e676, #aeea00);
+    transform: scale(1.05);
+}
+
+/* FOOTER */
+
+footer {
+    text-align: center;
+    padding: 18px;
+    background: linear-gradient(90deg, #212121, #424242);
+    color: white;
+    font-size: 15px;
+    letter-spacing: 1px;
+    margin-top: 20px;
+}
+
+/* MOBILE */
+
+@media(max-width:600px) {
+    .ads {
+        flex-direction: column;
+    }
+
+    .ads img {
+        width: 100%;
+    }
+}
+.promoText {
+    background: linear-gradient(90deg, #00c853, #b2ff59);
+    color: #1b1b1b;
+    text-align: center;
+    padding: 14px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 12px;
+    margin: 15px auto;
+    width: 90%;
+    max-width: 900px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+    animation: pop 2s ease;
+}
+
+@keyframes pop {
+    from { transform: scale(0.9); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+/* SPLASH SCREEN */
+
+#splash {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(135deg, #ff1744, #ff9100);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    animation: fadeOut 1s ease 2.5s forwards;
+}
+
+.splashLogo {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 50%;
+    background: white;
+    padding: 10px;
+    border: 5px solid white;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+/* fade animation */
+
+@keyframes fadeOut {
+    to {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+body {
+  overflow-x: hidden;
+}
+
+section, div {
+  max-width: 100%;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  .banner, .hero {
+    height: auto !important;
+    padding: 15px;
+  }
+}
+.call-btn {
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    background: #28a745;
+    color: white;
+    padding: 14px 20px;
+    border-radius: 50px;
+    font-size: 16px;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    z-index: 9999;
+}
+
+.call-btn:hover {
+    background: #1e7e34;
+}
